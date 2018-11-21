@@ -4,7 +4,7 @@ fake = Faker('en_US')
 # profile = open("/content/drive/My Drive/colab2/profile.txt", "a")
 # DRIVE_URL = "/content/drive/My Drive/colab2/"
 import os
-PATH = str(os.getcwd()) + '/'
+PATH = str(os.getcwd()) + '/data/'
 NUM = 100000000
 
 while True:
