@@ -27,18 +27,18 @@ for i in range(start, end):
 
 
     name = str(fake.name())
-    staff_record = '('+ id + ',' + name + '),'
+    staff_record = "("+ id + ", '" + name + "'),"
     staff.write(staff_record)
     
 
     address = str(fake.city())
     dob = str(fake.date_this_century(before_today=True, after_today=False))
     phone = str(fake.phone_number())
-    profile_record = "(" + id + ',' +  address + ',' + dob + ',' + phone + "),"
+    profile_record = "(" + id + ", '" +  address + "', '" + dob + "', '" + phone + "'),"
     profile.write(profile_record)
     
     card = str(fake.credit_card_number(card_type=None))
-    credit_record = '('+ id + ',' + name + '),'
+    credit_record = "("+ id + ", '" + name + "'),"
     credit.write(credit_record)
     
     print(i)
