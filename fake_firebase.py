@@ -17,18 +17,18 @@ while True:
 
 staff = {}
 profile = {}
-credit = {}
+# credit = {}
 
 staff_file = PATH + "staff_file[" + str(start) + '_' + str(end) + "].json"
 profile_file = PATH + "profile_file[" + str(start) + '_' + str(end) + "].json"
-credit_file = PATH + "credit_file[" + str(start) + '_' + str(end) + "].json"
+# credit_file = PATH + "credit_file[" + str(start) + '_' + str(end) + "].json"
 
 for i in range(start, end):
     id = str(i)
 
     staff_w = open(staff_file, "a")
     profile_w = open(profile_file, "a")
-    credit_w = open(credit_file, "a")
+    # credit_w = open(credit_file, "a")
 
     name = str(fake.name())
     staff[i] = {}
@@ -50,12 +50,12 @@ for i in range(start, end):
         json.dump(profile[i], fp)
     profile_w.write(',')
 
-    card = str(fake.credit_card_number(card_type=None))
-    credit[i] = {}
-    credit[i]['id'] = id
-    credit[i]['credit_card'] = card
-    with open(credit_file, 'a') as fp:
-        json.dump(credit[i], fp)
-    credit_w.write(',')
+    # card = str(fake.credit_card_number(card_type=None))
+    # credit[i] = {}
+    # credit[i]['id'] = id
+    # credit[i]['credit_card'] = card
+    # with open(credit_file, 'a') as fp:
+    #     json.dump(credit[i], fp)
+    # credit_w.write(',')
 
     print(i)
